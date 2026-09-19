@@ -28,7 +28,7 @@
 
 
 
-    // VALIDATION SIMPLIFIÉE DU FORMULAIRE DE CONTACT
+    // VALIDATION DU FORMULAIRE DE CONTACT
         
 
         // Récupération du formulaire et de la zone de message

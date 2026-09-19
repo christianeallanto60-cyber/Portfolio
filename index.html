@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Christiane ALLANTO</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- EN-TÊTE ET MENU DE NAVIGATION -->
+    <header class="en-tete-page">
+      <nav class="barre-navigation">
+
+        <!-- Logo -->
+        <a href="#accueil" class="logo-site">PORTFOLIO<span> Christiane ALLANTO</span></a>
+
+        <!-- Menu de navigation -->
+        <ul class="menu-navigation" id="menu-navigation">
+          <li><a href="#accueil" class="lien-navigation">Accueil</a></li>
+          <li><a href="#a-propos" class="lien-navigation">À propos</a></li>
+          <li>
+            <a href="#competences" class="lien-navigation">Compétences</a>
+          </li>
+          <li><a href="#projets" class="lien-navigation">Projets</a></li>
+          <li><a href="#contact" class="lien-navigation">Contact</a></li>
+        </ul>
+
+        <!-- Bouton Menu Mobile -->
+        <button
+          class="bouton-menu-mobile"
+          id="bouton-menu-mobile"
+          aria-label="Menu Mobile"
+        >
+          <span class="barre-bouton"></span>
+          <span class="barre-bouton"></span>
+          <span class="barre-bouton"></span>
+        </button>
+      </nav>
+    </header>
+
+  
+    <main>
+      <!-- SECTION 1 : ACCUEIL -->
+      <section id="accueil" class="section-accueil">
+        <!-- Côté Gauche : Textes et Boutons -->
+        <div class="texte-accueil">
+          <span class="salutation">Bonjour, je suis</span>
+          <h1 class="titre-nom">Christiane ALLANTO</h1>
+          <h2 class="sous-titre-metier">
+            Technicienne Supérieure en Informatique & Développeuse Web
+          </h2>
+          <p class="description-accueil">
+            Passionnée par le développement web, la création d'interfaces
+            modernes et l'accessibilité numérique.
+          </p>
+
+          <!-- Zone des Boutons d'action -->
+          <div class="bloc-boutons">
+            <a href="#projets" class="bouton bouton-principal"
+              >Voir mes projets</a
+            >
+            <a
+              href="assets/images/CV_Christiane_ALLANTO.pdf"
+              class="bouton bouton-secondaire"
+              download
+              >Télécharger mon CV</a
+            >
+            <a href="#contact" class="bouton bouton-secondaire">Me contacter</a>
+          </div>
+        </div>
+
+        <!-- Côté Droit : Image de profil -->
+        <div class="image-accueil">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Photo de profil de Christiane ALLANTO"
+          />
+        </div>
+      </section>
+
+      <!-- SECTION 2 : À PROPOS -->
+      <section id="a-propos" class="section-a-propos">
+        <h2 class="titre-section">À Propos de Moi</h2>
+        <div class="ligne-decorative"></div>
+
+        <div class="conteneur-a-propos">
+          <!-- Texte de présentation -->
+          <div class="texte-presentation">
+            <h3>Qui suis-je ?</h3>
+            <p>
+              Diplômée en
+              <strong>Informatique Industrielle et Maintenance</strong>, je mets
+              ma rigueur technique au service du
+              <strong>Développement Web moderne & du Design UI/UX</strong>.
+            </p>
+            <p>
+              Ma formation me permet aussi bien de concevoir des
+              <strong
+                >sites et applications web sur- mesure pour tous types de
+                secteurs</strong
+              >
+              (vitrine, gestion, e-commerce) que de développer des interfaces
+              spécialisées pour l'<strong
+                >Industrie 4.0, l'IoT et la supervision de systèmes
+                automatisés</strong
+              >.
+            </p>
+            <p>
+              Polyvalente, curieuse et orientée solutions, je suis disponible
+              immédiatement pour accompagner vos projets web, qu'ils soient
+              généraux ou à forte valeur technique.
+            </p>
+
+            <!-- Informations clés -->
+            <ul class="liste-infos">
+              <li><strong>Nom :</strong> ALLANTO Christiane</li>
+              <li>
+                <strong>Formation :</strong> Informatique Industrielle,
+                Maintenance & Développement Web
+              </li>
+              <li>
+                <strong>Domaines d'intervention :</strong> Sites Web sur-mesure,
+                Applications Web, IoT & Supervision
+              </li>
+              <li>
+                <strong>Statut :</strong> Disponible immédiatement pour
+                opportunités professionnelles
+              </li>
+            </ul>
+          </div>
+
+          <!-- Blocs de statistiques -->
+          <div class="blocs-chiffres">
+            <div class="carte-chiffre">
+              <span class="nombre-chiffre">100%</span>
+              <span class="texte-chiffre"
+                >Polyvalence (Web Général & Web Industriel/IoT)</span
+              >
+            </div>
+            <div class="carte-chiffre">
+              <span class="nombre-chiffre">4.0</span>
+              <span class="texte-chiffre"
+                >Rigueur Technique & Sens du Design</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3 : COMPÉTENCES -->
+      <section id="competences" class="section-competences">
+        <h2 class="titre-section">Mes Compétences</h2>
+        <div class="ligne-decorative"></div>
+
+        <div class="conteneur-competences">
+          <!-- Carte 1 : Maintenance, Systèmes & Réseaux (Spécialité Principale) -->
+          <article class="carte-competence">
+            <h3>Maintenance & Administration Réseaux</h3>
+            <p>
+              Gestion de parcs informatiques, configuration de routeurs,
+              switchs, copieurs réseau et dépannage des systèmes.
+            </p>
+          </article>
+
+          <!-- Carte 2 : IoT & Systèmes Embarqués -->
+          <article class="carte-competence">
+            <h3>IoT & Systèmes Embarqués</h3>
+            <p>
+              Connaissances en automatismes industriels, capteurs et intégration
+              de l'Internet des Objets (IoT).
+            </p>
+          </article>
+
+          <!-- Carte 3 : Développement Web (HTML, CSS, JS) -->
+          <article class="carte-competence">
+            <h3>Développement Web (HTML / CSS / JS)</h3>
+            <p>
+              Création de sites responsive, intégration sémantique, manipulation
+              du DOM et logique applicative en JavaScript.
+            </p>
+          </article>
+
+          <!-- Carte 4 : UI / UX & Prototypage Figma -->
+          <article class="carte-competence">
+            <h3>UI / UX & Prototypage Figma</h3>
+            <p>
+              Conception de wireframes, prototypes interactifs et architecture
+              d'interfaces centrées sur l'utilisateur.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 4 : PROJETS & RÉALISATIONS -->
+      <section id="projets" class="section-projets">
+        <h2 class="titre-section">Mes Projets & Réalisations</h2>
+        <div class="ligne-decorative"></div>
+
+        <div class="conteneur-projets">
+          <!-- Projet 1 : IoT Médical -->
+          <article class="carte-projet">
+            <div class="image-projet">
+              <img
+                src="assets/images/projet-iot-sante.jpg"
+                alt="Système de surveillance médicale connecté"
+              />
+            </div>
+            <div class="info-projet">
+              <span class="etiquette-projet">IoT & Santé</span>
+              <h3>Système de Surveillance Médicale</h3>
+              <p>
+                Conception d'un dispositif connecté (IoT) permettant le suivi et
+                la remontée en temps réel des constantes médicales d'un patient.
+              </p>
+              <div class="liens-projet">
+                <a href="#" class="lien-detail">Voir les détails</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 : IoT Incendie -->
+          <article class="carte-projet">
+            <div class="image-projet">
+              <img
+                src="assets/images/projet-iot-incendie.jpg"
+                alt="Système d'alarme d'incendie connecté"
+              />
+            </div>
+            <div class="info-projet">
+              <span class="etiquette-projet">IoT & Sécurité</span>
+              <h3>Système d'Alarme Anti-Incendie</h3>
+              <p>
+                Développement d'un système intelligent de détection de fumée et
+                température avec alerte automatique à distance.
+              </p>
+              <div class="liens-projet">
+                <a href="#" class="lien-detail">Voir les détails</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 : Robotique Mobile -->
+          <article class="carte-projet">
+            <div class="image-projet">
+              <img
+                src="assets/images/projet-robot.jpg"
+                alt="Conception d'un robot mobile"
+              />
+            </div>
+            <div class="info-projet">
+              <span class="etiquette-projet">Robotique & Embarqué</span>
+              <h3>Conception d'un Robot Mobile</h3>
+              <p>
+                Modélisation, programmation embarquée et assemblage d'un robot
+                mobile autonome doté de capteurs de navigation.
+              </p>
+              <div class="liens-projet">
+                <a href="#" class="lien-detail">Voir les détails</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 4 : Systèmes Automatisés / Industriels -->
+          <article class="carte-projet">
+            <div class="image-projet">
+              <img
+                src="assets/images/projet-industriel.jpg"
+                alt="Système automatisé industriel"
+              />
+            </div>
+            <div class="info-projet">
+              <span class="etiquette-projet">Informatique Industrielle</span>
+              <h3>Supervision de Systèmes Automatisés</h3>
+              <p>
+                Programmation d'automates, maintenance et câblage d'équipements
+                pour la gestion de procédés industriels.
+              </p>
+              <div class="liens-projet">
+                <a href="#" class="lien-detail">Voir les détails</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 5 : Développement Web & JS -->
+          <article class="carte-projet">
+            <div class="image-projet">
+              <img
+                src="assets/images/projet-web.jpg"
+                alt="Application Web Portfolio et JS"
+              />
+            </div>
+            <div class="info-projet">
+              <span class="etiquette-projet">Développement Web</span>
+              <h3>Applications Web & Portfolio SPA</h3>
+              <p>
+                Création d'interfaces web interactives, responsive et
+                accessibles avec HTML5, CSS3, JS et maquettage Figma.
+              </p>
+              <div class="liens-projet">
+                <a href="#accueil" class="lien-detail">Voir la démo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 5 : CONTACT -->
+      <section id="contact" class="section-contact">
+        <h2 class="titre-section">Me Contacter / Échanger sur vos projets</h2>
+        <div class="ligne-decorative"></div>
+        <p class="sous-titre-contact">
+          Disponible pour des opportunités en Informatique Industrielle, IoT,
+          Maintenance Réseaux et Développement Web.
+        </p>
+
+        <div class="conteneur-contact-grille">
+          <!-- COLONNE GAUCHE : COORDONNÉES DIRECTES -->
+          <aside class="bloc-coordonnees">
+            <h3>Canaux de communication directe</h3>
+
+            <ul class="liste-coordonnees">
+              <!-- Email -->
+              <li>
+                <span class="etiquette-coordonnee">Adresse Email :</span>
+                <a
+                  href="mailto:allantochristiane@gmail.com"
+                  class="lien- coordonnee"
+                  >allantochristiane@gmail.com</a
+                >
+              </li>
+
+              <!-- Téléphone -->
+              <li>
+                <span class="etiquette-coordonnee">Téléphone :</span>
+                <a href="tel:+2290000000000" class="lien-coordonnee"
+                  >+229 01 59 66 05 93 / 01 44 53 80 82</a
+                >
+              </li>
+
+              <!-- Localisation -->
+              <li>
+                <span class="etiquette-coordonnee"
+                  >Localisation & Mobilité :</span
+                >
+                <p>Bénin (Disponible sur site & en Télétravail)</p>
+              </li>
+            </ul>
+
+          </aside>
+
+          <!-- COLONNE DROITE : FORMULAIRE TECHNIQUE -->
+          <div class="bloc-formulaire">
+            <form id="formulaire-contact" class="formulaire-contact" novalidate>
+              <div id="message-retour" class="message-retour"></div>
+
+              <!-- Champ 1 : Nom / Entreprise -->
+              <div class="groupe-champ">
+                <label for="nom"
+                  >Nom / Entreprise <span class="etoile-obligatoire">*</span></label
+                >
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Nom / Entreprise"
+                  required
+                />
+              </div>
+
+              <!-- Champ 2 : Email -->
+              <div class="groupe-champ">
+                <label for="email"
+                  >Adresse Email professionnelle
+                  <span class="etoile- obligatoire">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="votre.email@exemple.com"
+                  required
+                />
+              </div>
+
+              <!-- Champ 3 : Type d'intervention -->
+              <div class="groupe-champ">
+                <label for="type-intervention"
+                  >Type d'intervention / Service souhaité
+                  <span class="etoile-obligatoire">*</span></label
+                >
+                <select
+                  id="type-intervention"
+                  name="type-intervention"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Sélectionnez le type de projet...
+                  </option>
+                  <option value="web">
+                    Développement Web / Site / Application
+                  </option>
+                  <option value="iot">Projet IoT & Systèmes Embarqués</option>
+                  <option value="maintenance">
+                    Maintenance Informatique & Reseaux
+                  </option>
+                  <option value="emploi">Proposition d'emploi / Mission</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <!-- Champ 4 : Message -->
+              <div class="groupe-champ">
+                <label for="message"
+                  >Description du besoin
+                  <span class="etoile- obligatoire">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Précisez les détails de votre projet ou besoin..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Bouton d'envoi -->
+              <button type="submit" class="bouton bouton-principal bouton-bloc">
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="pied-de-page">
+      <div class="conteneur-footer">
+        <p>&copy; 2026 Christiane ALLANTO. Tous droits réservés.</p>
+        <p class="texte-secondaire-footer">
+          Technicienne Supérieure en Informatique Industrielle, Maintenance &
+          Développement Web
+        </p>
+      </div>
+    </footer>
+
+    <!-- Fichier JavaScript -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

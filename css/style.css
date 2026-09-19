@@ -1,0 +1,671 @@
+    /* LES VARIABLES */
+    :root {
+        --couleur-principale: #1a4f8a;     
+        --couleur-secondaire: #007bff;     
+        --couleur-fond: #f8f9fa;         
+        --couleur-texte: #2d3748;          
+        --couleur-blanc: #ffffff;
+        --ombre-douce: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --police-principale: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Nettoyage des marges*/
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth; /* Défilement fluide lors des clics sur le menu */
+    }
+
+    body {
+        font-family: var(--police-principale);
+        color: var(--couleur-texte);
+        background-color: var(--couleur-fond);
+        line-height: 1.6;
+    }
+
+    /* Titres réutilisables */
+    .titre-section {
+        font-size: 2rem;
+        text-align: center;
+        color: var(--couleur-principale);
+        margin-bottom: 0.5rem;
+    }
+
+    .ligne-decorative {
+        width: 60px;
+        height: 4px;
+        background-color: var(--couleur-secondaire);
+        margin: 0 auto 2rem auto;
+        border-radius: 2px;
+    }
+
+
+     /* ENTETE & MENU DE NAVIGATION */
+    .en-tete-page {
+        position: fixed;            /* Accroche le menu en haut lors du défilement */
+        top: 0;
+        left: 0;
+        width: 100%;                /* Prend toute la largeur de l'écran */
+        background-color: var(--couleur-blanc);
+        box-shadow: var(--ombre-douce); /* Ombre légère sous le menu */
+        z-index: 1000;              /* Assure que le menu reste au-dessus de tout le contenu */
+    }
+
+    .barre-navigation {
+        display: flex;
+        justify-content: space-between; /* Place le logo à gauche et le menu à droite */
+        align-items: center;            /* Aligne verticalement le logo et le menu au centre */
+        max-width: 1200px;              /* Limite la largeur sur grand écran */
+        margin: 0 auto;                 /* Centre la barre de navigation */
+        padding: 1rem 2rem;             /* Espacement intérieur (haut/bas, gauche/droite) */
+    }
+
+    .logo-site {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--couleur-principale);
+        text-decoration: none;        /* Supprime le soulignement par défaut du lien */
+    }
+
+    .logo-site span {
+        color: var(--couleur-secondaire); /* Le prénom ou .A en bleu éclatant */
+    }
+
+    .menu-navigation {
+        display: flex;                 /* Alignement HORIZONTAL des éléments du menu */
+        list-style: none;              /* Enlève les puces noires de la liste <ul> */
+        gap: 2rem;                     /* Espace de 2rem entre chaque lien */
+    }
+
+    .lien-navigation {
+        text-decoration: none;
+        color: var(--couleur-texte);
+        font-weight: 500;
+        transition: color 0.3s ease;   /* Transition douce lors du survol */
+    }
+
+    .lien-navigation:hover {
+        color: var(--couleur-secondaire); /* Devient bleu au passage de la souris */
+    }
+
+    .bouton-menu-mobile {
+        display: none;                 /* Caché sur PC (on l'affichera sur mobile) */
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    /* SECTION 1 : ACCUEIL */
+    .section-accueil {
+        padding: 8rem 2rem 4rem 2rem;      
+        display: flex;               /* Met les textes (gauche) et l'image (droite) côte à côte */
+        align-items: center;         /* Aligne le texte et l'image verticalement au milieu */
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 6rem 2rem 2rem 2rem; /* 6rem en haut pour que le header fixe ne cache pas le texte */
+        gap: 2rem;                   /* Espace entre le bloc texte et la photo */
+    }
+
+    .texte-accueil {
+        flex: 1;                     /* Le texte occupe 50% de la largeur disponible */
+    }
+
+    .salutation {
+        font-size: 1.2rem;
+        color: var(--couleur-secondaire);
+        font-weight: 600;
+    }
+
+    .titre-nom {
+        font-size: 2.8rem;
+        color: var(--couleur-principale);
+        margin: 0.5rem 0;
+        line-height: 1.2;
+    }
+
+    .sous-titre-metier {
+        font-size: 1.3rem;
+        color: var(--couleur-texte);
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .description-accueil {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-width: 550px;            /* Limite la largeur pour une meilleure lisibilité */
+    }
+
+    /* BOUTONS */
+    .bloc-boutons {
+        display: flex;
+        gap: 0.8rem;                   /* Espace entre les boutons */
+        flex-wrap: nowrap;;             /* Permet aux boutons de se superposer sur petit écran */
+    }
+
+    .bouton {
+        display: inline-block;
+        padding: 0.7rem 1.2rem;
+        white-space: nowrap; /* Empêche le texte du bouton d'être écrit sur 2 lignes */
+        border-radius: 6px;          /* Coins arrondis */
+        text-decoration: none;       /* Enlève le soulignement des liens */
+        font-weight: 600;
+        transition: all 0.3s ease;   /* Animation fluide au survol */
+        cursor: pointer;
+        border: none;
+    }
+
+    .bouton-principal {
+        background-color: var(--couleur-secondaire);
+        color: var(--couleur-blanc);
+    }
+
+    .bouton-principal:hover {
+        background-color: var(--couleur-principale);
+        transform: translateY(-2px); /* Petit effet de surlèvement */
+    }
+
+    .bouton-secondaire {
+        background-color: transparent;
+        color: var(--couleur-principale);
+        border: 2px solid var(--couleur-principale);
+    }
+
+    .bouton-secondaire:hover {
+        background-color: var(--couleur-principale);
+        color: var(--couleur-blanc);
+        transform: translateY(-2px);
+    }
+
+    /* --- PHOTO DE PROFIL --- */
+    .image-accueil {
+        flex: 1;                     /* L'image occupe l'autre 50% de la largeur */
+        display: flex;
+        justify-content: center;     /* Centre l'image dans son bloc */
+    }
+
+    .image-accueil img {
+        width: 320px;                /* Largeur fixe de 320 pixels */
+        height: 320px;               /* Hauteur fixe de 320 pixels */
+        object-fit: cover;           /* Empêche l'image d'être déformée/écrasée */
+        border-radius: 50%;          /* Rend la photo parfaitement ronde ! */
+        border: 5px solid var(--couleur-blanc);
+        box-shadow: var(--ombre-douce);
+    }
+
+
+     /* SECTION 2 : À PROPOS */
+    .section-a-propos {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .conteneur-a-propos {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .texte-presentation {
+        flex: 1;
+    }
+
+    .texte-presentation h3 {
+        font-size: 1.5rem;
+        color: var(--couleur-principale);
+        margin-bottom: 1rem;
+    }
+
+    .texte-presentation p {
+        margin-bottom: 1rem;
+        color: var(--couleur-texte);
+    }
+
+    .liste-infos {
+        list-style: none;
+        margin-top: 1.5rem;
+    }
+
+    .liste-infos li {
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .liste-infos strong {
+        color: var(--couleur-principale);
+    }
+
+    /* --- CARTE DES STATISTIQUES / CHIFFRES CLÉS --- */
+    .blocs-chiffres {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .carte-chiffre {
+        background-color: var(--couleur-blanc);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: var(--ombre-douce);
+        border-left: 5px solid var(--couleur-secondaire); /* Ligne bleue sur le côté gauche */
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .carte-chiffre:hover {
+        transform: translateY(-5px); /* Petit effet d'élévation au survol */
+    }
+
+    .nombre-chiffre {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--couleur-principale);
+    }
+
+    .texte-chiffre {
+        font-size: 1rem;
+        color: var(--couleur-texte);
+        font-weight: 500;
+    }
+
+
+     /* SECTION 3 : COMPÉTENCES */
+    .section-competences {
+        padding: 5rem 2rem;
+        background-color: var(--couleur-blanc); /* Fond blanc pour alterner avec le fond gris clair */
+    }
+
+    .conteneur-competences {
+        display: grid;
+        /* Crée automatiquement 2 ou 4 colonnes réactives selon la largeur de l'écran */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .carte-competence {
+        background-color: var(--couleur-fond);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: var(--ombre-douce);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .carte-competence:hover {
+        transform: translateY(-8px);                 /* Soulève la carte de 8 pixels au survol */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Rend l'ombre plus marquée pour l'effet de relief */
+        border-top: 4px solid var(--couleur-secondaire); /* Fait apparaître une ligne bleue en haut */
+    }
+
+    .carte-competence h3 {
+        font-size: 1.25rem;
+        color: var(--couleur-principale);
+        margin-bottom: 1rem;
+    }
+
+    .carte-competence p {
+        font-size: 0.95rem;
+        color: var(--couleur-texte);
+        line-height: 1.5;
+    }
+
+
+     /* SECTION 4 : PROJETS & RÉALISATIONS */
+    .section-projets {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .conteneur-projets {
+        display: grid;
+        /* Crée une grille de cartes projets (3 colonnes sur PC, 2 sur tablette, 1 sur mobile) */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .carte-projet {
+        background-color: var(--couleur-blanc);
+        border-radius: 10px;
+        overflow: hidden;                /* Empêche l'image de dépasser des coins arrondis */
+        box-shadow: var(--ombre-douce);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carte-projet:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /*  IMAGE DU PROJET */
+    .image-projet {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;                /* Pour le zoom au survol */
+    }
+
+    .image-projet img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;               /* Recadre l'image proprement sans la déformer */
+        transition: transform 0.5s ease; /* Animation fluide de zoom */
+    }
+
+    .carte-projet:hover .image-projet img {
+        transform: scale(1.08);          /* Petit zoom de 8% sur l'image quand la souris passe dessus */
+    }
+
+    /* INFOS ET TEXTE DU PROJET  */
+    .info-projet {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;                    /* Fait en sorte que toutes les cartes aient la même hauteur */
+    }
+
+    .etiquette-projet {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background-color: rgba(0, 123, 255, 0.1);
+        color: var(--couleur-secondaire);
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 20px;
+        margin-bottom: 0.8rem;
+        align-self: flex-start;
+    }
+
+    .info-projet h3 {
+        font-size: 1.3rem;
+        color: var(--couleur-principale);
+        margin-bottom: 0.6rem;
+    }
+
+    .info-projet p {
+        font-size: 0.95rem;
+        color: var(--couleur-texte);
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .liens-projet {
+        margin-top: auto;
+    }
+
+    .lien-detail {
+        color: var(--couleur-secondaire);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .lien-detail:hover {
+        color: var(--couleur-principale);
+        text-decoration: underline;
+    }
+
+
+    /* SECTION 5 : CONTACT */
+    .section-contact {
+        padding: 5rem 2rem;
+        background-color: var(--couleur-blanc);
+    }
+
+    .sous-titre-contact {
+        text-align: center;
+        max-width: 650px;
+        margin: -1rem auto 3rem auto;
+        color: var(--couleur-texte);
+    }
+
+    .conteneur-contact-grille {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr; /* 2 colonnes : Coordonnées à gauche, Formulaire plus large à droite */
+        gap: 3rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* COLONNE GAUCHE : COORDONNÉES */
+    .bloc-coordonnees {
+        background-color: var(--couleur-fond);
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: var(--ombre-douce);
+    }
+
+    .bloc-coordonnees h3 {
+        font-size: 1.4rem;
+        color: var(--couleur-principale);
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--couleur-secondaire);
+        padding-bottom: 0.5rem;
+    }
+
+    .liste-coordonnees {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .etiquette-coordonnee {
+        display: block;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--couleur-principale);
+        margin-bottom: 0.2rem;
+    }
+
+    .lien-coordonnee {
+        color: var(--couleur-secondaire);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+
+    .lien-coordonnee:hover {
+        text-decoration: underline;
+    }
+
+    .bloc-telechargement-cv {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /* COLONNE DROITE : FORMULAIRE */
+    .bloc-formulaire {
+        background-color: var(--couleur-fond);
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: var(--ombre-douce);
+    }
+
+    .formulaire-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .groupe-champ {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .groupe-champ label {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--couleur-principale);
+    }
+
+    .etoile-obligatoire {
+        color: #e53e3e; /* Rouge pour indiquer les champs obligatoires */
+    }
+
+    /* Style des champs input, select et textarea */
+    .groupe-champ input,
+    .groupe-champ select,
+    .groupe-champ textarea {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        font-family: inherit;
+        font-size: 0.95rem;
+        background-color: var(--couleur-blanc);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Effet au clic (Focus) dans un champ */
+    .groupe-champ input:focus,
+    .groupe-champ select:focus,
+    .groupe-champ textarea:focus {
+        outline: none;
+        border-color: var(--couleur-secondaire);
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+    }
+
+    .bouton-bloc {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    /* Message de retour JavaScript (Erreur / Succès) */
+    .message-retour {
+        padding: 0.8rem;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        display: none; /* Masqué par défaut, affiché via JS */
+    }
+
+    .message-retour.succes {
+        display: block;
+        background-color: #c6f6d5;
+        color: #22543d;
+        border: 1px solid #9ae6b4;
+    }
+
+    .message-retour.erreur {
+        display: block;
+        background-color: #fed7d7;
+        color: #742a2a;
+        border: 1px solid #feb2b2;
+    }
+
+
+
+    /* PIED DE PAGE (FOOTER) */
+    .pied-de-page {
+        background-color: var(--couleur-principale); /* Fond bleu foncé pro */
+        color: var(--couleur-blanc);                 /* Texte blanc */
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        border-top: 3px solid var(--couleur-secondaire); /* Ligne bleue vive au-dessus */
+    }
+
+    .conteneur-footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .pied-de-page p {
+        font-size: 0.95rem;
+    }
+
+    .texte-secondaire-footer {
+        font-size: 0.85rem;
+        opacity: 0.85;                                /* Légère transparence pour le sous-texte */
+        font-weight: 300;
+    }
+
+
+
+    /* RESPONSIVE DESIGN (MOBIL & TABLETTE)*/
+
+    /* TABLETTES ET MOBILES (Moins de 768px) */
+    @media screen and (max-width: 768px) {
+
+        /* 1. Menu de Navigation Mobile */
+        .menu-navigation {
+            position: fixed;
+            top: 70px;
+            right: -100%;             /* Caché hors de l'écran à droite par défaut */
+            width: 80%;
+            height: calc(100vh - 70px);
+            background-color: var(--couleur-blanc);
+            flex-direction: column;   /* Empile les liens verticalement */
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            transition: right 0.4s ease; /* Animation glissante quand on ouvre le menu */
+        }
+
+        /* Classe ajoutée en JavaScript quand on clique sur le bouton burger */
+        .menu-navigation.actif {
+            right: 0;                  /* Fait apparaître le menu sur l'écran */
+        }
+
+        /* Affiche le bouton Burger uniquement sur mobile */
+        .bouton-menu-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .barre-bouton {
+            width: 25px;
+            height: 3px;
+            background-color: var(--couleur-principale);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* 2. Section Accueil sur Mobile */
+        .section-accueil {
+            flex-direction: column-reverse; /* Met la photo en haut et le texte en dessous */
+            text-align: center;
+            padding-top: 6rem;
+        }
+
+        .image-accueil img {
+            width: 220px;              /* Image plus petite sur mobile */
+            height: 220px;
+        }
+
+        .bloc-boutons {
+            justify-content: center;
+            flex-wrap: wrap;           /* Permet aux boutons de se superposer proprement sur smartphone */
+        }
+
+        /* 3. Section À propos sur Mobile */
+        .conteneur-a-propos {
+            flex-direction: column;
+        }
+
+        /* 4. Section Contact sur Mobile */
+        .conteneur-contact-grille {
+            grid-template-columns: 1fr; /* 1 seule colonne pour les coordonnées et le formulaire */
+        }
+    }
